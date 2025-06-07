@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_backup_bd"
+        android:title="Respaldar BD"
+        android:icon="@drawable/img_database_save"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/menu_restore_bd"
+        android:title="Restaurar BD"
+        android:icon="@drawable/img_database_refresh"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/menu_password_change"
+        android:title="Cambiar contraseña"
+        android:icon="@drawable/img_password_change"
+        tools:ignore="HardcodedText" />
+
+</menu>

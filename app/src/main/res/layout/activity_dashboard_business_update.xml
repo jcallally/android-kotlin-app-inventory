@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.dashboard.business.update.DashboardBusinessUpdateActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/ab_customers_update"
+            layout="@layout/action_bar_simple"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layout_below="@id/ab_customers_update"
+            android:layout_above="@id/ll_business_update">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Formulario -->
+                <ImageView
+                    android:id="@+id/iv_business_update_Logo"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:padding="10dp"
+                    android:background="@drawable/border_rounded_image_green"
+                    android:src="@drawable/img_logo_business_camera"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="imageview logo"
+                    tools:ignore="HardcodedText" />
+
+                <!-- Nota sobre los campos obligatorios -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Los campos marcados con * son obligatorios."
+                    android:textColor="@color/green"
+                    android:textStyle="italic"
+                    android:textSize="14sp"
+                    android:layout_marginTop="50dp"
+                    tools:ignore="HardcodedText,PrivateResource" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_business_update_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:startIconDrawable="@drawable/ic_business">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_business_update_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="Nombre"
+                        android:imeOptions="actionNext"
+                        android:inputType="textAutoComplete|textCapWords|textPersonName"
+                        android:padding="16dp"
+                        tools:ignore="HardcodedText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_business_update_ruc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:helperTextTextColor="@color/red"
+                    app:counterEnabled="true"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_ruc"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_business_update_ruc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="R.U.C. *"
+                        android:padding="16dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        tools:ignore="HardcodedText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_business_update_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:helperTextTextColor="@color/red"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_location"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_business_update_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Dirección"
+                        android:padding="16dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        tools:ignore="HardcodedText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_business_update_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:helperTextTextColor="@color/red"
+                    app:endIconMode="clear_text"
+                    app:endIconDrawable="@drawable/ic_clear"
+                    app:startIconDrawable="@drawable/ic_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_business_update_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Correo electrónico"
+                        android:padding="16dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        tools:ignore="HardcodedText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_business_update_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:helperTextTextColor="@color/red"
+                    app:prefixText="+51"
+                    app:counterEnabled="true"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_mobile"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_business_update_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Teléfono"
+                        android:padding="16dp"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        tools:ignore="HardcodedText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_business_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_business_update_btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar Cambios"
+                android:textStyle="bold"
+                android:padding="16dp"
+                app:cornerRadius="5dp"
+                app:icon="@drawable/ic_check"
+                app:iconGravity="textStart"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

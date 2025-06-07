@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.dashboard.customers.list.DashboardCustomersListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/action_bar_options_search"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_customers_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_customers_list_btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Agregar Cliente"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_gravity="bottom|end"
+        app:backgroundTint="@color/green"
+        app:icon="@drawable/ic_add_user"
+        app:iconTint="@color/white"
+        tools:ignore="HardcodedText,PrivateResource" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.dashboard.products.DashboardProductsCategoriesFragment">
+
+    <include layout="@layout/action_bar_simple_search"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_products_categories"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="60dp" />
+
+</LinearLayout>

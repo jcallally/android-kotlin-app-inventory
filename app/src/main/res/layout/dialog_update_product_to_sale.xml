@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Editar producto de la"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lista"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+            <TextView
+                android:id="@+id/tv_dialog_update_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:text="Ropero"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:background="@drawable/edittext_custom_green_5dp"
+                android:gravity="center"
+                android:padding="8dp"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+            <TextView
+                android:id="@+id/tv_dialog_update_product_barcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="C/B: 01072200"
+                android:textColor="@color/green"
+                android:textAlignment="textEnd"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="18dp">
+
+                <ImageButton
+                    android:id="@+id/ib_dialog_update_product_remove"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_remove_box"
+                    android:backgroundTint="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="Remover producto"
+                    tools:ignore="HardcodedText,PrivateResource" />
+
+                <TextView
+                    android:id="@+id/tv_dialog_update_product_quantity"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:text="8"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:background="@drawable/edittext_custom_green_5dp"
+                    android:padding="8dp"
+                    tools:ignore="HardcodedText,PrivateResource,TextViewEdits" />
+
+                <ImageButton
+                    android:id="@+id/ib_dialog_update_product_add"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_add_box"
+                    android:backgroundTint="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="Agregar producto"
+                    tools:ignore="HardcodedText,PrivateResource" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_dialog_update_product_price_sell"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_custom_green_5dp"
+                android:gravity="center"
+                android:hint="Precio de venta"
+                android:padding="8dp"
+                android:textSize="20sp"
+                android:inputType="numberDecimal"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:text="Cantidad en stock"
+                    android:textAlignment="textEnd"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_dialog_update_product_stock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="85"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:background="@drawable/edittext_custom_green_0dp"
+                    android:backgroundTint="@color/green"
+                    android:padding="4dp"
+                    tools:ignore="HardcodedText,PrivateResource" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:text="Precio base"
+                    android:textAlignment="textEnd"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_dialog_update_product_price_base"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="S/200.00"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:background="@color/green"
+                    android:backgroundTint="@color/green"
+                    android:padding="4dp"
+                    tools:ignore="HardcodedText,PrivateResource" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="2">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_dialog_update_product_btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:text="Cancelar"
+                    android:textStyle="bold"
+                    android:padding="16dp"
+                    app:cornerRadius="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_dialog_update_product_btn_save"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="Guardar"
+                    android:textStyle="bold"
+                    android:padding="16dp"
+                    app:cornerRadius="5dp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

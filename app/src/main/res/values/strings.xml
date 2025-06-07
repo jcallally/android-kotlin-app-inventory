@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Negocio Pro</string>
+
+    <string name="hint_ruc">R.U.C.</string>
+    <string name="hint_dni">D.N.I.</string>
+    <string name="hint_ruc_asterisk">R.U.C. *</string>
+    <string name="hint_dni_asterisk">D.N.I. *</string>
+</resources>

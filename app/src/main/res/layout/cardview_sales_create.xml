@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackgroundBorderless"
+    card_view:cardElevation="4dp"
+    card_view:cardBackgroundColor="@color/white"
+    tools:ignore="PrivateResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5.4"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/tv_cv_sales_create_number_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:text="30."
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_cv_sales_create_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.1"
+            android:layout_marginEnd="5dp"
+            android:gravity="start"
+            android:text="Ropero de 2 cuerpos chocolate"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_cv_sales_create_quantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:text="2"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_cv_sales_create_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:gravity="end"
+            android:text="800.00"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_cv_sales_create_total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:gravity="end"
+            android:text="1600.00"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/ib_cv_sales_create_btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="19dp"
+            android:layout_weight="0.3"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center|top"
+            android:src="@drawable/ic_cancel" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" />
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="12dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackgroundBorderless">
+
+    <LinearLayout
+        android:id="@+id/ll_cv_users"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@drawable/edittext_custom_green_accent_10dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_cv_users_image"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:src="@drawable/ic_user"
+                android:layout_gravity="center"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/gray_dark"
+                app:civ_circle_background_color="@color/white"
+                tools:ignore="PrivateResource" />
+
+            <ImageView
+                android:id="@+id/iv_cv_users_badge_online"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="end|bottom"
+                android:background="@drawable/shape_circular_badge"
+                android:contentDescription="imageview badge"
+                tools:ignore="HardcodedText" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:id="@+id/tv_cv_users_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Callally Ramirez Javier"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+            <TextView
+                android:id="@+id/tv_cv_users_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Administrador"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_admin"
+                android:drawablePadding="0dp"
+                android:background="@drawable/background_rounded"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="9dp"
+                android:visibility="visible"
+                tools:ignore="HardcodedText,PrivateResource,UseCompatTextViewDrawableXml" />
+
+            <TextView
+                android:id="@+id/tv_cv_users_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="jcallally@gmail.com"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Teléfono: "
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,PrivateResource" />
+
+                <TextView
+                    android:id="@+id/tv_cv_users_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="987021188"
+                    android:textSize="13sp"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_cv_users_delete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/img_delete"
+            android:contentDescription="button delete"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

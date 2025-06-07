@@ -1,0 +1,77 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.InventarioStock" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/gray_dark</item>
+        <item name="colorOnPrimary" tools:ignore="PrivateResource">@color/white</item>
+
+        <!-- Color que va acentuar los iconos y cursor de la aplicación -->
+        <item name="colorAccent">@color/green</item>
+
+        <!-- Color de la barra de notificaciones (Status Bar)-->
+        <item name="android:statusBarColor">@color/green</item>
+
+        <!-- Fuente para el proyecto -->
+        <item name="android:fontFamily">@font/roboto_regular</item>
+
+    </style>
+
+    <!-- Estilo splashScreen para versiones menores a v31 -->
+    <!-- Utiliza 1 archivo de recursos que contienen la configuración del logo-->
+    <!--<style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground" tools:ignore="PrivateResource">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/splash_screen_logo</item>
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.InventarioStock</item>
+    </style>-->
+
+    <!-- Estilo splashScreen para versiones menores a v31 -->
+    <!-- Utiliza directamente la imagen del logo -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground" tools:ignore="PrivateResource">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.InventarioStock</item>
+    </style>
+
+    <!-- Estilo Toolbar personalizado -->
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal" tools:ignore="PrivateResource">@color/white</item>
+        <item name="android:textColorHint" tools:ignore="PrivateResource">@color/white</item>
+        <item name="android:textColorPrimary" tools:ignore="PrivateResource">@color/white</item>
+    </style>
+
+    <!-- Estilo AlerDialog descripción categoría-->
+    <style name="RoundedMaterialDialogCategoriesAdapter" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/CustomDialog</item>
+        <item name="colorSurface" tools:ignore="PrivateResource">@color/white</item>
+        <item name="android:background">@drawable/dialog_background_white_border_12dp_green</item>
+    </style>
+
+    <!-- Estilo AlerDialog descripción producto-->
+    <style name="RoundedMaterialDialogProductsAdapter" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/CustomDialog</item>
+        <item name="colorSurface" tools:ignore="PrivateResource">@color/white</item>
+        <item name="android:background">@drawable/dialog_background_white_border_12dp</item>
+    </style>
+    
+    <!-- Estilo AlertDialog agregar producto a venta -->
+    <style name="RoundedMaterialDialogSalesCreate" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/CustomDialog</item>
+        <item name="colorSurface" tools:ignore="PrivateResource">@color/white</item>
+        <item name="android:background">@drawable/dialog_background_green_light</item>
+    </style>
+
+    <style name="CustomDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">13dp</item>
+    </style>
+
+    <!-- Estilo Calendar del dateRangePicker -->
+    <style name="ThemeMaterialCalendar" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+</resources>

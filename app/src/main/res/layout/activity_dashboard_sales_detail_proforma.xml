@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.dashboard.sales.detail.DashboardSalesDetailProformaActivity">
+
+    <!-- Contenido principal de la factura -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_detail_proforma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="16dp"
+            tools:ignore="PrivateResource">
+
+            <!-- Encabezado de la Factura  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Logo de la empresa -->
+                <ImageView
+                    android:id="@+id/iv_detail_proforma_business_logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/border_rounded_image_green"
+                    android:src="@drawable/img_logo_business"
+                    android:contentDescription="LOGO"
+                    tools:ignore="HardcodedText" />
+
+                <!-- Datos de la empresa -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_business_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="El Cedro"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText,PrivateResource" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_business_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Santa Rita de Casia C61 Mariano Melgar Arequipa"
+                        android:textSize="9sp"
+                        android:maxLines="2"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_business_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="987021188"
+                        android:textSize="9sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_business_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="jcallally@gmail.com"
+                        android:textSize="9sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                </LinearLayout>
+
+                <!-- Factura electronica -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:weightSum="3"
+                    android:orientation="vertical"
+                    android:background="@drawable/border_rounded_4dp">
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_business_ruc"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="R.U.C. 10420593100"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:gravity="center"
+                        tools:ignore="HardcodedText,PrivateResource" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_business_voucher_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="PROFORMA"
+                        android:textSize="11sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:background="@color/black"
+                        android:textAlignment="center"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:gravity="center"
+                        tools:ignore="HardcodedText,PrivateResource" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_business_voucher_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="P001 - 00001"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:gravity="center"
+                        tools:ignore="HardcodedText,PrivateResource" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Separador -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_accent"
+                android:layout_marginVertical="8dp" />
+
+            <!-- Datos del cliente -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_name_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cliente: "
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="PUBLICO GENERAL"
+                        android:textSize="10sp"
+                        android:layout_toEndOf="@id/tv_detail_proforma_customer_name_title"
+                        android:layout_toStartOf="@id/tv_detail_proforma_customer_emission_date_title"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_emission_date_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha de emisión: "
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_toStartOf="@+id/tv_detail_proforma_customer_emission_date"
+                        tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_emission_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="06/10/2024"
+                        android:textSize="10sp"
+                        android:layout_alignParentEnd="true"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_ruc_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RUC: "
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_alignParentStart="true"
+                        tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_ruc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="10420593100"
+                        android:textSize="10sp"
+                        android:layout_toEndOf="@id/tv_detail_proforma_customer_ruc_title"
+                        android:layout_toStartOf="@id/tv_detail_proforma_customer_expiration_date_title"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_expiration_date_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha de vencimiento: "
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_toStartOf="@+id/tv_detail_proforma_customer_expiration_date"
+                        tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_expiration_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="06/10/2024"
+                        android:textSize="10sp"
+                        android:layout_alignParentEnd="true"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_address_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dirección: "
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_alignParentStart="true"
+                        tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="Av. Lima 187 - Miraflores"
+                        android:textSize="10sp"
+                        android:layout_toEndOf="@id/tv_detail_proforma_customer_address_title"
+                        android:layout_toStartOf="@id/tv_detail_proforma_customer_currency_title"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_currency_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Moneda: "
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_toStartOf="@+id/tv_detail_proforma_customer_currency"
+                        tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Soles"
+                        android:textSize="10sp"
+                        android:layout_alignParentEnd="true"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_phone_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Teléfono: "
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_alignParentStart="true"
+                        tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="985648598"
+                        android:textSize="10sp"
+                        android:layout_toEndOf="@+id/tv_detail_proforma_customer_phone_title"
+                        android:layout_toStartOf="@+id/tv_detail_proforma_customer_seller_title"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_seller_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vendedor: "
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_toStartOf="@id/tv_detail_proforma_customer_seller"
+                        tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_customer_seller"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Claudia Martinez"
+                        android:textSize="10sp"
+                        android:layout_alignParentEnd="true"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- Separador -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_accent"
+                android:layout_marginVertical="8dp" />
+
+            <!-- Título de productos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="5"
+                android:padding="4dp"
+                android:background="@color/green">
+
+                <!-- Encabezado de columnas -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:text="N.°"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.1"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="start"
+                    android:text="NOMBRE"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:text="CANT."
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="end"
+                    android:text="PRECIO"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="end"
+                    android:text="TOTAL"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+            </LinearLayout>
+
+            <!-- Lista de productos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_detail_proforma"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:scrollbars="vertical"/>
+
+            </LinearLayout>
+
+            <!-- Separador -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:layout_marginVertical="8dp"
+                tools:ignore="PrivateResource" />
+
+            <!-- Resumen de la factura -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_total_quantity_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cantidad Total: "
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_total_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="17"
+                        android:textSize="10sp"
+                        android:paddingEnd="10dp"
+                        tools:ignore="HardcodedText,RtlSymmetry,SmallSp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total Venta:"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textAlignment="textEnd"
+                        tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Total:"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textAlignment="textEnd"
+                        tools:ignore="HardcodedText,PrivateResource,SmallSp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="I.G.V.:"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textAlignment="textEnd"
+                        tools:ignore="HardcodedText,PrivateResource,SmallSp"/>
+
+                    <!-- Separador -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_accent"
+                        android:layout_marginVertical="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total a Pagar:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+                    <!-- Separador -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_accent"
+                        android:layout_marginVertical="2dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="9dp">
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_total_sale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300.00"
+                        android:textSize="12sp"
+                        android:paddingStart="10dp"
+                        tools:ignore="HardcodedText,RtlSymmetry,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_subotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="254.24"
+                        android:textSize="12sp"
+                        android:textAlignment="textEnd"
+                        android:paddingStart="10dp"
+                        tools:ignore="HardcodedText,RtlSymmetry,SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_igv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="45.76"
+                        android:textSize="12sp"
+                        android:paddingStart="10dp"
+                        android:textAlignment="textEnd"
+                        tools:ignore="HardcodedText,RtlSymmetry,SmallSp" />
+
+                    <!-- Separador -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_accent"
+                        android:layout_marginVertical="2dp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_proforma_total_to_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="300.00"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:textAlignment="textEnd"
+                        android:paddingStart="10dp"
+                        tools:ignore="HardcodedText,PrivateResource,RtlSymmetry,SmallSp" />
+
+                    <!-- Separador -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_accent"
+                        android:layout_marginVertical="2dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Total a pagar en palabras -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SON: "
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <TextView
+                    android:id="@+id/tv_detail_proforma_total_to_pay_in_words"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TRECIENTOS Y 00/100 SOLES"
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+            </LinearLayout>
+
+            <!-- Firma -->
+            <LinearLayout
+                android:id="@+id/ll_detail_proforma_signature_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:layout_gravity="end"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_detail_proforma_signature"
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:contentDescription="Vista para la firma"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="@color/black"
+                    android:layout_marginVertical="0dp"
+                    tools:ignore="PrivateResource" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="Firmante Autorizado"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+            </LinearLayout>
+
+            <!-- Separador -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_accent"
+                android:layout_marginVertical="8dp" />
+
+            <!-- Mensaje de agradecimiento -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Muchas gracias por su compra!"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Contenedor para los botones flotantes -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            tools:ignore="UselessParent">
+
+            <!-- Botón delete -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_detail_proforma_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:contentDescription="back"
+                android:src="@drawable/ic_arrow_back_white"
+                android:clickable="true"
+                android:focusable="true"
+                app:backgroundTint="@color/green"
+                app:tint="@color/white"
+                app:fabSize="mini"
+                app:maxImageSize="25dp"
+                app:rippleColor="@color/white"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+            <!-- Botón Share -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_detail_proforma_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:contentDescription="Share"
+                android:src="@drawable/ic_share"
+                android:clickable="true"
+                android:focusable="true"
+                app:backgroundTint="@color/green"
+                app:tint="@color/white"
+                app:fabSize="mini"
+                app:maxImageSize="25dp"
+                app:rippleColor="@color/white"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+            <!-- Botón Confirmar venta -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_detail_proforma_confirm_sale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:contentDescription="Share"
+                android:src="@drawable/ic_shopping_checkout"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                app:backgroundTint="@color/green"
+                app:tint="@color/white"
+                app:fabSize="mini"
+                app:maxImageSize="25dp"
+                app:rippleColor="@color/white"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+            <!-- Botón Print -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_detail_proforma_print"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:contentDescription="Print"
+                android:src="@drawable/ic_print"
+                android:clickable="true"
+                android:focusable="true"
+                app:backgroundTint="@color/green"
+                app:tint="@color/white"
+                app:fabSize="mini"
+                app:maxImageSize="25dp"
+                app:rippleColor="@color/white"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

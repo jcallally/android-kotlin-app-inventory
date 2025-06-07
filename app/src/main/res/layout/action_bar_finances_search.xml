@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_finances_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/white"
+        app:theme="@style/ToolbarTheme"
+        tools:ignore="PrivateResource">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Botón Back -->
+            <ImageButton
+                android:id="@+id/ib_finances_search_btn_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="0dp"
+                android:src="@drawable/ic_arrow_back_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/ripple_circular_white"
+                android:contentDescription="button back"
+                tools:ignore="HardcodedText" />
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/tv_finances_search_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/ib_finances_search_btn_back"
+                android:layout_toStartOf="@id/ib_finances_search_btn_home"
+                android:text=""
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/roboto_regular"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+
+            <!-- Botón Home -->
+            <ImageButton
+                android:id="@+id/ib_finances_search_btn_home"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_home"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/ripple_circular_white"
+                android:contentDescription="button home"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Separador -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/transparent"/>
+
+    <!-- Buscador por Fecha -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:ignore="PrivateResource">
+
+        <EditText
+            android:id="@+id/et_finances_search_by_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/ib_finances_search_clear_date"
+            android:layout_centerVertical="true"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:background="@drawable/ripple_circular_gray_accent"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="12dp"
+            android:hint="Buscar Fecha"
+            android:singleLine="true"
+            android:lines="1"
+            android:padding="11.5dp"
+            android:focusable="false"
+            android:inputType="none"
+            android:cursorVisible="false"
+            android:longClickable="false"
+            app:rippleColor="@color/gray_accent"
+            tools:ignore="HardcodedText,TextFields"
+            android:importantForAutofill="no" />
+
+        <ImageButton
+            android:id="@+id/ib_finances_search_clear_date"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_clear"
+            android:visibility="gone"
+            android:contentDescription="button clear"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <!-- Separador -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+
+</com.google.android.material.appbar.AppBarLayout>

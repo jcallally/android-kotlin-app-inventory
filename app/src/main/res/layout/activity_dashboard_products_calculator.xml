@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    tools:context=".activities.dashboard.products.calculator.DashboardProductsCalculatorActivity">
+
+    <include layout="@layout/action_bar_simple" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsv_products_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layout_above="@id/ll_products_calculator">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardElevation="10dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:attr/selectableItemBackgroundBorderless">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Gastos totales de producción"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textAlignment="center"
+                            tools:ignore="HardcodedText,PrivateResource" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ejemplo: s/1000 para producir 2 roperos"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            tools:ignore="HardcodedText" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_products_calculator_expenses_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="¿?"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:inputType="numberDecimal"
+                            android:textAlignment="center"
+                            tools:ignore="HardcodedText,PrivateResource" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Precio de venta al público"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textAlignment="center"
+                            tools:ignore="HardcodedText,PrivateResource" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ejemplo: Cada ropero se vende a s/600"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            tools:ignore="HardcodedText" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_products_calculator_price_sell"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="¿?"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:inputType="numberDecimal"
+                            android:textAlignment="center"
+                            app:prefixText="S/"
+                            tools:ignore="HardcodedText,PrivateResource" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cantidad total"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textAlignment="center"
+                            tools:ignore="HardcodedText,PrivateResource" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ejemplo: 2 roperos"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            tools:ignore="HardcodedText" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_products_calculator_quantity_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="¿?"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:scrollbars="vertical"
+                            tools:ignore="HardcodedText,PrivateResource" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/edittext_custom_green_solid_5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tu costo por unidad es:"
+                            android:textSize="17sp"
+                            android:textColor="@color/green_dark"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tv_products_calculator_cost_per_unit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="20sp"
+                            android:textColor="@color/green_dark"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/edittext_custom_green_solid_5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tu ganancia por unidad es:"
+                            android:textSize="17sp"
+                            android:textColor="@color/green_dark"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tv_products_calculator_profit_per_unit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="20sp"
+                            android:textColor="@color/green_dark"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_products_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_products_calculator_btn_calculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CALCULAR"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:imeOptions="actionDone"
+                app:cornerRadius="5dp"
+                app:icon="@drawable/ic_check"
+                app:iconGravity="textStart"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/dialog_background_white_border_12dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Image -->
+        <!-- "wrap_content" y android:adjustViewBounds="true" permiten que el ImageView
+        ajuste su altura automáticamente según el tamaño y la proporción de la imagen -->
+        <ImageView
+            android:id="@+id/iv_dialog_user_description_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_user"
+            android:background="@drawable/border_rounded_image_gray"
+            android:padding="10dp"
+            android:contentDescription="imageview user"
+            tools:ignore="HardcodedText" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <!-- Transparent Shadow -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_dark2"
+                android:alpha="0.5"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tv_dialog_user_description_name"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Nombre del usuario"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_dialog_user_description_btn_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="bottom"
+        android:text="Cerrar"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:imeOptions="actionDone"
+        app:cornerRadius="5dp"
+        app:icon="@drawable/ic_close"
+        app:iconGravity="textStart"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

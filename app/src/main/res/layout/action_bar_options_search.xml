@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_options_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        app:titleTextColor="@color/white"
+        app:theme="@style/ToolbarTheme"
+        tools:ignore="PrivateResource">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/ib_options_search_btn_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="0dp"
+                android:src="@drawable/ic_arrow_back_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/ripple_circular_white"
+                android:contentDescription="button back"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_options_search_title_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/ib_options_search_btn_back"
+                android:layout_toStartOf="@id/ib_options_search_btn_home"
+                android:text=""
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/roboto_regular"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+
+            <ImageButton
+                android:id="@+id/ib_options_search_btn_home"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_home"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/ripple_circular_white"
+                android:contentDescription="button home"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Criterio de búsqueda -->
+    <RadioGroup
+        android:id="@+id/rg_options_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="1dp"
+        android:gravity="center_horizontal"
+        android:background="@color/white"
+        tools:ignore="PrivateResource">
+
+        <RadioButton
+            android:id="@+id/rb_options_search_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre o Razón Social"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText,PrivateResource" />
+
+        <RadioButton
+            android:id="@+id/rb_options_search_ruc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R.U.C."
+            android:textSize="12sp"
+            android:layout_marginStart="16dp"
+            tools:ignore="HardcodedText,PrivateResource" />
+
+        <RadioButton
+            android:id="@+id/rb_options_search_dni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D.N.I."
+            android:textSize="12sp"
+            android:layout_marginStart="16dp"
+            tools:ignore="HardcodedText,PrivateResource" />
+
+    </RadioGroup>
+
+    <!-- Separador -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+
+    <!-- Buscador por nombre, ruc, dni -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv_options_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:iconifiedByDefault="false"
+        app:queryHint="Búsqueda Según Criterio"
+        tools:ignore="PrivateResource" />
+
+</com.google.android.material.appbar.AppBarLayout>

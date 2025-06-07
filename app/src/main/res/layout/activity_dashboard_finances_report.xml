@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.dashboard.finances.report.DashboardFinancesReportActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/action_bar_simple" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_finances_report_title_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ventas y Ganancias"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+            <TextView
+                android:id="@+id/tv_finances_report_title_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="(28/07/2025 - 30/07/2025)"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barchart_finances_report"
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Vista separadora -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp">
+
+        <!-- Muestra el total de ventas -->
+        <LinearLayout
+            android:id="@+id/ll_finances_report_sales_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="bottom"
+            android:baselineAligned="false">
+
+            <ImageView
+                android:id="@+id/iv_finances_report_toggle_sales_eye"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_eye_show"
+                android:contentDescription="imageview eye"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_finances_report_toggle_sales_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mostrar total de ventas: "
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+            <!-- "gone" elimina la vista y su espacio -->
+            <!-- "invisible" oculta la vista pero conserva el espacio -->
+            <TextView
+                android:id="@+id/tv_finances_report_toggle_sales_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S/10800.00"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+        </LinearLayout>
+
+        <!-- Muestra el total de ganancias -->
+        <LinearLayout
+            android:id="@+id/ll_finances_reportt_profits_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="bottom"
+            android:baselineAligned="false">
+
+            <ImageView
+                android:id="@+id/iv_finances_report_toggle_profits_eye"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_eye_show"
+                android:contentDescription="imageview eye"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_finances_report_toggle_profits_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mostrar total de ganancias: "
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+            <!-- "gone" elimina la vista y su espacio -->
+            <!-- "invisible" oculta la vista pero conserva el espacio -->
+            <TextView
+                android:id="@+id/tv_finances_report_toggle_profits_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S/10800.00"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

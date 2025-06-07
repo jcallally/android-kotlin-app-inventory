@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.dashboard.expenses.detail.DashboardExpensesDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/action_bar_simple"/>
+
+        <!-- Datos del Producto -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Título: Nombre del Producto -->
+            <TextView
+                android:id="@+id/tv_expenses_detail_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Nombre del Producto"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+            <!-- Fecha y Costo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Fecha del Gasto -->
+                <TextView
+                    android:id="@+id/tv_expenses_detail_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fecha: 01/01/2024"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <!-- Costo Total -->
+                <TextView
+                    android:id="@+id/tv_expenses_detail_total_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Costo Total: S/150.00"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <!-- Cantidad y Categoría -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Cantidad Total -->
+                <TextView
+                    android:id="@+id/tv_expenses_detail_total_quantity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cantidad Total: 10"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <!-- Categoría del Producto -->
+                <TextView
+                    android:id="@+id/tv_expenses_detail_product_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categoría: Tecnología"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Título de Detalle de Entradas -->
+        <TextView
+            android:id="@+id/tv_expenses_detail_entries_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Movimientos en el Stock"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,PrivateResource" />
+
+        <!-- FECHA / CANTIDAD / COSTO-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:padding="4dp"
+            android:background="@color/green">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:text="FECHA Y HORA"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:text="CANTIDAD"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:text="COSTO"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText,PrivateResource" />
+
+        </LinearLayout>
+
+        <!-- RecyclerView para Detalle de Entradas -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_expenses_detail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

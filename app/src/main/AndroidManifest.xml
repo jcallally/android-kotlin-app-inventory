@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Permisos para versiones anteriores a Android 12 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- Permisos necesarios en Android 12 o superior -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" /> <!-- Permiso necesario para el escaneo en versiones anteriores a Android 12 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" /> <!-- Permiso para escribir el backup en el almacenamiento externo (obsoleto en Android 10+) -->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Base.Theme.InventarioStock"
+        tools:targetApi="31">
+        <activity
+            android:name=".activities.authentication.passwordUpdate.AuthenticationPasswordUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.authentication.passwordForgot.AuthenticationPasswordForgotActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:ignore="DiscouragedApi"
+            tools:replace="screenOrientation" /> <!-- Crear la actividad del escaner (ZXing) para ajustar la orientación automática de la cámara -->
+        <activity
+            android:name=".activities.dashboard.finances.report.DashboardFinancesReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.finances.summary.DashboardFinancesSummaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.expenses.detail.DashboardExpensesDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.expenses.list.DashboardExpensesListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.profits.list.DashboardProfitsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.sales.voucher.DashboardSalesVoucherQuotationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.sales.detail.DashboardSalesDetailTicketActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.sales.detail.DashboardSalesDetailReceiptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.sales.detail.DashboardSalesDetailProformaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.sales.detail.DashboardSalesDetailInvoiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.sales.voucher.DashboardSalesVoucherProformaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.customers.update.DashboardCustomersUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.customers.list.DashboardCustomersListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.customers.create.DashboardCustomersCreateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.business.update.DashboardBusinessUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.sales.voucher.DashboardSalesVoucherTicketActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.sales.voucher.DashboardSalesVoucherReceiptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.sales.voucher.DashboardSalesVoucherInvoiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.sales.create.DashboardSalesCreateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.sales.list.DashboardSalesListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.users.update.DashboardUsersUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.users.create.DashboardUsersCreateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.users.list.DashboardUsersListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.products.update.DashboardProductsUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.products.list.DashboardProductsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.products.home.DashboardProductsHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.products.calculator.DashboardProductsCalculatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.dashboard.DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.splashScreen.ScreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.App.Starting">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.authentication.MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

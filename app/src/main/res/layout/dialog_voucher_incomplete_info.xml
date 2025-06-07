@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/ic_warning_amber"
+            android:contentDescription="imageview warning"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:text="DATOS INCOMPLETOS"
+            android:textSize="18sp"
+            android:textColor="@color/black2"
+            android:gravity="center_vertical"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_dialog_voucher_incomplete_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Mensaje del diálogo"
+        android:textSize="16sp"
+        android:textColor="@color/gray_dark"
+        tools:ignore="HardcodedText,PrivateResource" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="end">
+
+        <TextView
+            android:id="@+id/tv_dialog_voucher_incomplete_complete_business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="COMPLETAR NEGOCIO"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/ripple_rectangle_green_light2"
+            android:padding="10dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_dialog_voucher_incomplete_complete_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="COMPLETAR CLIENTE"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/ripple_rectangle_green_light2"
+            android:padding="10dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_dialog_voucher_incomplete_skip_and_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="OMITIR Y CONTINUAR"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/ripple_rectangle_green_light2"
+            android:padding="10dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_dialog_voucher_incomplete_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="SALIR"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/ripple_rectangle_green_light2"
+            android:padding="10dp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</LinearLayout>

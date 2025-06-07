@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccione el tipo de comprobante:"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:id="@+id/rg_dialog_voucher_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_dialog_voucher_selection_boleta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_radio_button"
+            android:text="Boleta"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rb_dialog_voucher_selection_factura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_radio_button"
+            android:text="Factura"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rb_dialog_voucher_selection_cotizacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_radio_button"
+            android:text="Cotización"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rb_dialog_voucher_selection_proforma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_radio_button"
+            android:text="Proforma"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rb_dialog_voucher_selection_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_radio_button"
+            android:text="Ticket"
+            tools:ignore="HardcodedText" />
+
+    </RadioGroup>
+
+</LinearLayout>

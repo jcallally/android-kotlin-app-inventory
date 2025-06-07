@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.dashboard.customers.create.DashboardCustomersCreateActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/ab_customers_update"
+            layout="@layout/action_bar_simple" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layout_below="@id/ab_customers_update"
+            android:layout_above="@id/ll_customers_create">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/civ_customers_create_image"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center|top"
+                        android:src="@drawable/ic_user"
+                        app:civ_border_color="@color/green"
+                        app:civ_border_width="1dp"
+                        app:civ_circle_background_color="@color/gray_light" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_customers_create_camera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom"
+                        android:src="@drawable/ic_camera"
+                        app:backgroundTint="@color/green"
+                        app:tint="@color/white"
+                        app:borderWidth="2dp"
+                        app:fabSize="normal"
+                        app:rippleColor="@color/white"
+                        tools:ignore="HardcodedText,PrivateResource"
+                        android:contentDescription="button camera" />
+
+                </FrameLayout>
+
+                <!-- Nota sobre los campos obligatorios -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Los campos marcados con * son obligatorios."
+                    android:textColor="@color/green"
+                    android:textStyle="italic"
+                    android:textSize="14sp"
+                    android:layout_marginTop="50dp"
+                    tools:ignore="HardcodedText,PrivateResource" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_customers_create_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:helperTextTextColor="@color/red"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_customers_create_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nombre o Razón Social *"
+                        android:padding="16dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        tools:ignore="HardcodedText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_customers_create_ruc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:helperTextTextColor="@color/red"
+                    app:counterEnabled="true"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_ruc"
+                    app:hintEnabled="true"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edittext_customers_register_ruc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="R.U.C."
+                        android:padding="16dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        tools:ignore="HardcodedText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_customers_create_dni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:helperTextTextColor="@color/red"
+                    app:counterEnabled="true"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_ruc"
+                    app:hintEnabled="true"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edittext_customers_register_dni"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="D.N.I."
+                        android:padding="16dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        tools:ignore="HardcodedText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_customers_create_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:helperTextTextColor="@color/red"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_location"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edittext_customers_register_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Dirección"
+                        android:padding="16dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        tools:ignore="HardcodedText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_customers_create_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:helperTextTextColor="@color/red"
+                    app:prefixText="+51"
+                    app:counterEnabled="true"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_mobile"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_customers_create_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Teléfono"
+                        android:padding="16dp"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        tools:ignore="HardcodedText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_customers_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_customers_create_btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrar"
+                android:textStyle="bold"
+                android:padding="16dp"
+                app:cornerRadius="5dp"
+                app:icon="@drawable/ic_check"
+                app:iconGravity="textStart"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

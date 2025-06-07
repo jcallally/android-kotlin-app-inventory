@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.dashboard.sales.create.DashboardSalesCreateActivity">
+
+    <!-- Contenedor vertical principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Barra de acción personalizada -->
+        <include layout="@layout/action_bar_autocomplete" />
+
+        <!-- Títulos de la lista de productos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="5.4"
+            android:padding="4dp"
+            android:background="@drawable/button_rounded_top"
+            android:backgroundTint="@color/green">
+
+            <!-- Columna: Número -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:text="N.°"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+            <!-- Columna: Nombre -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.1"
+                android:layout_marginEnd="5dp"
+                android:gravity="start"
+                android:text="NOMBRE"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+            <!-- Columna: Cantidad -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:text="CANT."
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+            <!-- Columna: Precio -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:gravity="end"
+                android:text="PRECIO"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+            <!-- Columna: Total -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:gravity="end"
+                android:text="TOTAL"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText,PrivateResource,SmallSp" />
+
+            <!-- Espacio para un ícono o funcionalidad adicional -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:ignore="PrivateResource" />
+
+        </LinearLayout>
+
+        <!-- Contenedor principal de la lista -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Contenedor desplazable para la lista -->
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:layout_above="@id/ll_sales_create"
+                android:paddingBottom="0dp">
+
+                <!-- RecyclerView para mostrar los productos -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_sales_create"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:scrollbars="vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <!-- Layout inferior para resumen y acciones -->
+            <LinearLayout
+                android:id="@+id/ll_sales_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:paddingBottom="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <!-- Sección para mostrar el monto total -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Etiqueta de texto: Total -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TOTAL"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_rounded_left"
+                        android:backgroundTint="@color/green"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        tools:ignore="HardcodedText,PrivateResource" />
+
+                    <!-- Monto total calculado -->
+                    <TextView
+                        android:id="@+id/tv_sales_create_total_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2100.00"
+                        android:textSize="20sp"
+                        android:textColor="@color/red"
+                        android:gravity="center"
+                        android:background="@drawable/edittext_custom_green_0dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        tools:ignore="HardcodedText" />
+
+                    <!-- Unidad de moneda: Soles -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Soles"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_rounded_right"
+                        android:backgroundTint="@color/green"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        tools:ignore="HardcodedText,PrivateResource" />
+
+                </LinearLayout>
+
+                <!-- Botón crear comprobante -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_sales_create_voucher"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Crear comprobante"
+                        android:textStyle="bold"
+                        android:padding="16dp"
+                        app:cornerRadius="5dp"
+                        app:icon="@drawable/ic_add_document"
+                        app:iconGravity="textStart"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

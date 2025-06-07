@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- TODO: Estilo splashScreen para versiones mayor o igual a v31 -->
+
+    <!--  ****** NOTA IMPORTANTE ******
+      (1) La imagen del logo y del brand se crea en el directorio mipmap con la opción Image Asset.
+      (2) Para el logo se adjunta una imagen y para el brand se crea un diseño con texto.
+      (3) Las dimensiones de las imagenes se ajustan con Resize y el resultado se muestra en mipmap.
+      (4) En el directorio mipmap se crean los archivos necesarios para agregar a esta configuración.
+      (5) Para versiones menores a v31 solo se implementa el logo.
+    -->
+
+    <!-- Utiliza 2 archivos de recursos que contienen la configuración del logo y la firma -->
+    <!--<style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground" tools:ignore="PrivateResource">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/splash_screen_logo</item>
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.InventarioStock</item>
+        <item name="android:windowSplashScreenBrandingImage">@mipmap/splash_screen_brand</item>
+    </style>-->
+
+    <!-- Utiliza directamente las imagenes del logo y la firma -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground" tools:ignore="PrivateResource">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.InventarioStock</item>
+        <item name="android:windowSplashScreenBrandingImage">@drawable/splash_screen_brand</item>
+    </style>
+
+</resources>
