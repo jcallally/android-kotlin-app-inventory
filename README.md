@@ -143,7 +143,7 @@
 
 >[!IMPORTANT]
 > Este proyecto se encuentra bajo la Licencia Apache 2.0.
-> Consulta el archivo [LICENSE](https://github.com/jcallally/negocio-pro/blob/main/LICENSE) para más detalles.
+> Consulta el archivo [LICENSE](https://github.com/jcallally/android-kotlin-app-inventory-sharedpreferences/blob/main/LICENSE) para más detalles.
 >
 > ```
 >    Copyright 2025
