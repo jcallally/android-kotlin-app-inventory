@@ -43,7 +43,7 @@
 >### Clientes y Usuarios
 >
 >| Clientes | Actualizar Cliente | Usuarios | Crear Usuario |
->|----------|---------------------|----------|----------------|
+>|----------|--------------------|----------|---------------|
 > | <img src="https://imgur.com/78r78Fh.jpg" alt="Clientes" width="170px"> | <img src="https://imgur.com/6XDHe9Q.jpg" alt="Actualizar Cliente" width="170px"> | <img src="https://imgur.com/tuudlKu.jpg" alt="Usuarios" width="170px"> | <img src="https://imgur.com/RMNoKvT.jpg" alt="Crear Usuario" width="170px"> |
 >
 >### Finanzas y Reportes
