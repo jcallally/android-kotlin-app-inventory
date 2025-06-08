@@ -19,25 +19,25 @@
 >### Inicio
 >
 >| Splash | Login | Registro | Recuperar contraseña |
->|--------|-------|----------|-----------------------|
+>|--------|-------|----------|----------------------|
 > | <img src="https://imgur.com/mDwrinD.jpg" alt="Splash" width="170px"> | <img src="https://imgur.com/LsvuKOk.jpg" alt="Login" width="170px"> | <img src="https://imgur.com/C47jOLa.jpg" alt="Registro" width="170px"> | <img src="https://imgur.com/gNUCTjC.jpg" alt="Recuperar contraseña" width="170px"> |
 >
 >### Dashboard y Configuración
 >
->| Dashboard | Respaldar BD | Restaurar BD |
->|-----------|--------------|---------------|
-> | <img src="https://imgur.com/5eVQeZT.jpg" alt="Dashboard" width="170px"> | <img src="https://imgur.com/LEcMwwe.jpg" alt="Respaldar BD" width="170px"> | <img src="https://imgur.com/qSEiI7k.jpg" alt="Restaurar BD" width="170px"> |
+>| Dashboard | Configuración | Respaldar BD | Restaurar BD |
+>|-----------|---------------|--------------|--------------|
+> | <img src="https://imgur.com/5eVQeZT.jpg" alt="Dashboard" width="170px"> | <img src="https://imgur.com/UEy9eKm.jpg" alt="Configuración" width="170px"> | <img src="https://imgur.com/LEcMwwe.jpg" alt="Respaldar BD" width="170px"> | <img src="https://imgur.com/qSEiI7k.jpg" alt="Restaurar BD" width="170px"> |
 >
 >### Ventas
 >
->| Lista de Ventas | Agregar Producto | Comprobante |
->|------------------|------------------|-------------|
-> | <img src="https://imgur.com/ZlbkkrN.jpg" alt="Lista de Ventas" width="170px"> | <img src="https://imgur.com/Yi2z452.jpg" alt="Agregar Producto" width="170px"> | <img src="https://imgur.com/woKPaiD.jpg" alt="Comprobante" width="170px"> |
+>| Lista de Ventas | Agregar Producto | Elegir comprobante | Comprobante |
+>|-----------------|------------------|--------------------|-------------|
+> | <img src="https://imgur.com/ZlbkkrN.jpg" alt="Lista de Ventas" width="170px"> | <img src="https://imgur.com/Yi2z452.jpg" alt="Agregar Producto" width="170px"> | <img src="https://imgur.com/BsfWAhh.jpg" alt="Lista de Ventas" width="170px"> | <img src="https://imgur.com/woKPaiD.jpg" alt="Comprobante" width="170px"> |
 >
 >### Productos
 >
 >| Registrar Categoría | Registrar Producto | Lista Productos | Editar Producto |
->|---------------------|--------------------|------------------|------------------|
+>|---------------------|--------------------|-----------------|-----------------|
 > | <img src="https://imgur.com/RREneYN.jpg" alt="Registrar Categoría" width="170px"> | <img src="https://imgur.com/ZeHwOZx.jpg" alt="Registrar Producto" width="170px"> | <img src="https://imgur.com/UjG6IkK.jpg" alt="Lista Productos" width="170px"> | <img src="https://imgur.com/t0ZqI2E.jpg" alt="Editar Producto" width="170px"> |
 >
 >### Clientes y Usuarios
@@ -48,9 +48,9 @@
 >
 >### Finanzas y Reportes
 >
->| Ganancias | Gastos por Producto | Reporte Financiero |
->|-----------|---------------------|---------------------|
-> | <img src="https://imgur.com/jMz9PeS.jpg" alt="Ganancias" width="170px"> | <img src="https://imgur.com/9rQnABH.jpg" alt="Gastos por Producto" width="170px"> | <img src="https://imgur.com/ylhzdtr.jpg" alt="Reporte Financiero" width="170px"> |
+>| Ganancias | Gastos por Producto | Resumen Financiero |Reporte Financiero |
+>|-----------|---------------------|--------------------|-------------------|
+> | <img src="https://imgur.com/jMz9PeS.jpg" alt="Ganancias" width="170px"> | <img src="https://imgur.com/9rQnABH.jpg" alt="Gastos por Producto" width="170px"> | <img src="https://imgur.com/7dnI8dy.jpg" alt="Resumen Financiero" width="170px"> | <img src="https://imgur.com/ylhzdtr.jpg" alt="Reporte Financiero" width="170px"> |
 >
 >### Negocio
 >
