@@ -3,7 +3,7 @@
 <h1 align="center">Negocio Pro - Administración Integral de Negocios</h1>
 
 <!--Banner-->
-<img src="https://i.imgur.com/XyXtTng.gif">
+<img src="https://i.imgur.com/n5bCE7L.png">
 
 ## Descripción
 
