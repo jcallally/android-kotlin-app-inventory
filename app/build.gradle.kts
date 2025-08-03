@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.inventariostock"
+    namespace = "com.javcodedev.inventory"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.inventariostock"
+        applicationId = "com.javcodedev.inventory"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
